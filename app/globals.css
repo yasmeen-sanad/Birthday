@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* عناصر معقّدة (تدرجات وقصّ النجوم) لا تُكتب جيداً كـ utilities */
+@layer components {
+  .star-shape {
+    clip-path: polygon(50% 0, 62% 36%, 100% 38%, 70% 60%, 80% 100%, 50% 76%, 20% 100%, 30% 60%, 0 38%, 38% 36%);
+  }
+  .star-pink {
+    background:
+      radial-gradient(circle at 30% 30%, #fff9 0 1.5px, transparent 2.5px) 0 0 / 8px 8px,
+      linear-gradient(135deg, #f9c3d6, #e98bb0);
+  }
+  .star-silver {
+    background: linear-gradient(135deg, #f4f5f8, #a9adb8 55%, #e8e9ee);
+  }
+  .hat-shape {
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    background: linear-gradient(160deg, #ffd0e0, #f08fb2);
+  }
+  .candle-text {
+    color: transparent;
+    -webkit-text-stroke: 3px #e86f9d;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background:
+      radial-gradient(circle at 20% 30%, #fff9 0 2px, transparent 3px) 0 0 / 9px 9px,
+      radial-gradient(circle at 70% 60%, #fff8 0 1.5px, transparent 2.5px) 0 0 / 7px 7px,
+      linear-gradient(#ffc4d8, #f07aa6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    filter: drop-shadow(0 6px 8px rgba(224, 85, 139, 0.35));
+  }
+  .disco-ball {
+    background:
+      radial-gradient(circle at 32% 28%, #fff 0, #fff0 38%),
+      radial-gradient(circle at 70% 78%, #0006, #0000 55%),
+      repeating-linear-gradient(0deg, #0000 0 9px, #4448 9px 11px),
+      repeating-linear-gradient(90deg, #0000 0 9px, #4448 9px 11px),
+      linear-gradient(135deg, #f1f1f4, #9a9ca6 45%, #e4e5ea 60%, #6d6f7a);
+    box-shadow: inset -14px -18px 30px #0006, 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
