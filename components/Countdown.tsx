@@ -23,7 +23,7 @@ const GLITTER =
 export default function Countdown({
   date,
   className,
-  bg = "/images/sparkly.jpeg",
+  bg = "/images/Sparkly.jpeg",
 }: {
   date: string;
   className?: string;
