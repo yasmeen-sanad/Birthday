@@ -46,7 +46,7 @@ function Section({
   return (
     <section ref={sectionRef} className={`relative isolate flex min-h-svh w-full items-center justify-center overflow-hidden ${className}`}>
       {!noSparkles && <Sparkles flip={flip} />}
-      <div className="relative z-10 flex w-full max-w-[480px] flex-col items-center px-6 py-14 text-center">{children}</div>
+      <div className="relative z-10 flex w-full max-w-[400px] flex-col items-center px-4 py-8 text-center">{children}</div>
     </section>
   );
 }
@@ -197,17 +197,17 @@ export default function Invitation() {
           style={{ backgroundImage: `url(${INTRO_BG})` }}
         >
           <Sparkles />
-          <Reveal className="relative -top-10 z-10 flex flex-col items-center text-center">
+          <Reveal className="relative -top-6 z-10 flex flex-col items-center text-center sm:-top-10">
 
             {/* Name intro */}
-            <p className="mt-4 font-hand text-[28px] font-bold leading-none text-rose/70">it is</p>
+            <p className="mt-4 font-hand text-[24px] font-bold leading-none text-rose/70 sm:text-[28px]">it is</p>
 
             {/* Birthday names */}
             <div className="mt-2 flex flex-col items-center gap-0.5">
               {[a, b, c].map((name, i) => (
                 <Reveal key={name} delay={120 * (i + 1)}>
                   <span
-                    className="block bg-gradient-to-r from-hot via-[#c23a78] to-rose bg-clip-text px-2 pb-1 font-serif text-[40px] font-bold lowercase italic leading-[1.15] text-transparent [filter:drop-shadow(0_2px_0_#fff)]"
+                    className="block bg-gradient-to-r from-hot via-[#c23a78] to-rose bg-clip-text px-2 pb-1 font-serif text-[32px] font-bold lowercase italic leading-[1.15] text-transparent [filter:drop-shadow(0_2px_0_#fff)] sm:text-[40px]"
                     style={{ transform: `rotate(${i === 1 ? 1.5 : -1.5}deg)` }}
                   >
                     {name}
@@ -217,7 +217,7 @@ export default function Invitation() {
             </div>
 
             {/* Birthday */}
-            <p className="mt-3 font-hand text-[28px] font-bold leading-none text-hot [text-shadow:0_2px_0_#fff,0_6px_14px_rgba(224,85,139,.35)]">
+            <p className="mt-3 font-hand text-[24px] font-bold leading-none text-hot [text-shadow:0_2px_0_#fff,0_6px_14px_rgba(224,85,139,.35)] sm:text-[28px]">
               birthday
             </p>
 
@@ -226,9 +226,9 @@ export default function Invitation() {
               <img
                 src="/images/star.png"
                 alt="Tap to open"
-                className="h-16 w-16 animate-bounce"
+                className="h-14 w-14 animate-bounce sm:h-16 sm:w-16"
               />
-              <span className="animate-pulse font-hand text-[13px] font-bold leading-none text-rose">
+              <span className="animate-pulse font-hand text-[13px] font-bold leading-none text-rose sm:text-[17px]">
                 tap to open
               </span>
             </div>
@@ -244,15 +244,15 @@ export default function Invitation() {
   <Reveal className="relative flex w-full flex-col items-center">
     {/* Happy birthday */}
     <p
-      className="text-center font-serif text-[48px] font-bold leading-none text-rose [text-shadow:0_2px_0_#fff,0_6px_14px_rgba(224,85,139,.35)]"
+      className="text-center font-serif text-[36px] font-bold leading-none text-rose [text-shadow:0_2px_0_#fff,0_6px_14px_rgba(224,85,139,.35)] sm:text-[48px]"
     >
       Happy birthday
     </p>
 
     {/* Names and message */}
     <p
-      className="mt-8 max-w-[340px] text-center font-serif text-[22px] font-semibold leading-9 text-rose
-        [paint-order:stroke_fill] [-webkit-text-stroke:6px_#f6efe6]
+      className="mt-6 max-w-[300px] text-center font-serif text-[18px] font-semibold leading-8 text-rose sm:mt-8 sm:max-w-[340px] sm:text-[22px] sm:leading-9
+        [paint-order:stroke_fill] [-webkit-text-stroke:4px_#f6efe6] sm:[-webkit-text-stroke:6px_#f6efe6]
         [text-shadow:0_2px_12px_rgba(246,239,230,.95),0_0_24px_rgba(246,239,230,.9)]"
     >
       {a} {b} and {c} I hope you have the greatest year and the best birthday ever, Always Dream big and shine like a star!
@@ -262,19 +262,19 @@ export default function Invitation() {
     <img
       src="/images/cake.png"
       alt="Cake"
-      className="mt-8 h-32 w-31"
+      className="mt-6 h-24 w-24 sm:h-32 sm:w-32"
     />
 
     {/* Stickers */}
     <img
       src="/images/silver-star.png"
       alt=""
-      className="absolute top-[-50px] left-[-10px] h-14 w-15 rotate-[-15deg]"
+      className="absolute -top-8 -left-4 h-12 w-12 -rotate-12 sm:h-14 sm:w-14 sm:-left-2"
     />
      <img
       src="/images/silver-star.png"
       alt=""
-      className="absolute top-[-43px] left-[350px] h-14 w-15 rotate-[15deg]"
+      className="absolute -top-8 -right-4 h-12 w-12 rotate-12 sm:h-14 sm:w-14 sm:-right-2"
     />
   </Reveal>
 </Section>
@@ -283,28 +283,28 @@ export default function Invitation() {
 <Section sectionRef={section2Ref}>
   <Reveal className="relative flex w-full flex-col items-center gap-4">
     {/* Eyebrow */}
-    <p className="font-hand text-[22px] font-bold leading-none text-rose/70">
-       the big night is near 
+    <p className="font-hand text-[18px] font-bold leading-none text-rose/70 sm:text-[22px]">
+       the big night is near
     </p>
 
     {/* Title */}
-    <p className="font-serif text-[32px] font-bold leading-none text-rose">
+    <p className="font-serif text-[28px] font-bold leading-none text-rose sm:text-[32px]">
       Counting down
     </p>
 
     {/* Subtitle */}
-    <p className="font-hand text-[24px] font-bold leading-none text-rose/80">
+    <p className="font-hand text-[20px] font-bold leading-none text-rose/80 sm:text-[24px]">
       Get ready to sparkle
     </p>
 
     {/* العدّ التنازلي */}
-    <div className="relative z-10 mt-5 w-full rounded-[28px] border-2 border-white bg-gradient-to-b from-white/60 to-pink/20 px-3 py-3 text-center shadow-[0_12px_40px_rgba(122,31,69,.18)]">
+    <div className="relative z-10 mt-4 w-full rounded-[24px] border-2 border-white bg-gradient-to-b from-white/60 to-pink/20 px-3 py-3 text-center shadow-[0_12px_40px_rgba(122,31,69,.18)] sm:mt-5 sm:rounded-[28px]">
       <Countdown date={invite.dateISO} />
     </div>
 
     {/* Tagline under countdown */}
-    <p className="mt-2 max-w-[300px] text-center font-hand text-[22px] font-bold leading-snug text-rose/80">
-      every second brings us closer to the best night 
+    <p className="mt-2 max-w-[280px] text-center font-hand text-[18px] font-bold leading-snug text-rose/80 sm:max-w-[300px] sm:text-[22px]">
+      every second brings us closer to the best night
     </p>
 
 
@@ -312,65 +312,65 @@ export default function Invitation() {
     <img
       src="/images/pink-star.png"
       alt=""
-      className="absolute top-[-15px] left-[310px] h-14 w-15 rotate-[-130deg]"
+      className="absolute -top-4 right-4 h-10 w-10 -rotate-45 sm:h-14 sm:w-14 sm:top-[-15px] sm:right-[280px] sm:-rotate-[130deg]"
     />
     <img
       src="/images/pink-star.png"
       alt=""
-      className="absolute top-[-20px] left-[30px] h-14 w-15 rotate-[15deg]"
+      className="absolute -top-4 left-4 h-10 w-10 rotate-45 sm:h-14 sm:w-14 sm:top-[-20px] sm:left-[30px] sm:rotate-[15deg]"
     />
   </Reveal>
 </Section>
 
      {/* 3) التفاصيل */}
 <Section sectionRef={section3Ref}>
-  <h2 className="relative z-10 font-serif text-[38px] font-bold leading-none text-rose">
+  <h2 className="relative z-10 font-serif text-[32px] font-bold leading-none text-rose sm:text-[38px]">
     Party Details
   </h2>
 
-  <Reveal className="relative z-10 mt-5 w-full rounded-[28px] border-2 border-white bg-gradient-to-b from-white/60 to-pink/20 px-5 py-6 text-center shadow-[0_12px_40px_rgba(122,31,69,.18)]">
-    <dl className="grid gap-4 text-ink">
+  <Reveal className="relative z-10 mt-4 w-full rounded-[24px] border-2 border-white bg-gradient-to-b from-white/60 to-pink/20 px-4 py-5 text-center shadow-[0_12px_40px_rgba(122,31,69,.18)] sm:mt-5 sm:rounded-[28px] sm:px-5 sm:py-6">
+    <dl className="grid gap-3 text-ink sm:gap-4">
       <div>
-        <dt className="font-hand text-2xl font-bold text-pink">When</dt>
-        <dd className="font-serif text-xl font-bold text-rose">
+        <dt className="font-hand text-xl font-bold text-pink sm:text-2xl">When</dt>
+        <dd className="font-serif text-lg font-bold text-rose sm:text-xl">
           {invite.weekday}, {invite.dateLabel}
         </dd>
-        <dd className="text-base text-ink/80">{invite.timeLabel}</dd>
+        <dd className="text-sm text-ink/80 sm:text-base">{invite.timeLabel}</dd>
       </div>
 
       <div className="mx-auto h-px w-2/3 bg-pink/40" />
 
       <div>
-        <dt className="font-hand text-2xl font-bold text-pink">Where</dt>
-        <dd className="font-serif text-xl font-bold text-rose">{invite.venue}</dd>
-        <dd className="text-base text-ink/80">{invite.address}</dd>
+        <dt className="font-hand text-xl font-bold text-pink sm:text-2xl">Where</dt>
+        <dd className="font-serif text-lg font-bold text-rose sm:text-xl">{invite.venue}</dd>
+        <dd className="text-sm text-ink/80 sm:text-base">{invite.address}</dd>
       </div>
 
       <div className="mx-auto h-px w-2/3 bg-pink/40" />
 
       <div>
-        <dt className="font-hand text-2xl font-bold text-pink">Good to know</dt>
+        <dt className="font-hand text-xl font-bold text-pink sm:text-2xl">Good to know</dt>
         {invite.notes.map((n) => (
-          <dd key={n} className="text-base leading-snug text-ink/90">
+          <dd key={n} className="text-sm leading-snug text-ink/90 sm:text-base">
             {n}
           </dd>
         ))}
       </div>
     </dl>
 
-   <div className="mx-auto mt-7 grid w-full max-w-[280px] gap-3">
+   <div className="mx-auto mt-6 grid w-full max-w-[260px] gap-2.5 sm:mt-7 sm:max-w-[280px] sm:gap-3">
   <a
     href={invite.mapUrl}
     target="_blank"
     rel="noreferrer"
-    className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-gradient-to-b from-pink to-rose px-6 py-2.5 font-hand text-[26px] font-bold leading-none text-white shadow-[0_6px_0_rgba(122,31,69,.35)] transition active:translate-y-[3px] active:shadow-[0_3px_0_rgba(122,31,69,.35)] rotate-[-1.5deg]"
+    className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-gradient-to-b from-pink to-rose px-5 py-2 font-hand text-[22px] font-bold leading-none text-white shadow-[0_6px_0_rgba(122,31,69,.35)] transition active:translate-y-[3px] active:shadow-[0_3px_0_rgba(122,31,69,.35)] -rotate-1.5 sm:px-6 sm:py-2.5 sm:text-[26px] sm:-rotate-[1.5deg]"
   >
     <span>📍</span> Open map
   </a>
 
   <button
     onClick={downloadIcs}
-    className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-rose bg-white/90 px-6 py-2.5 font-hand text-[26px] font-bold leading-none text-rose shadow-[0_6px_0_rgba(122,31,69,.2)] transition active:translate-y-[3px] active:shadow-[0_3px_0_rgba(122,31,69,.2)] rotate-[1.5deg]"
+    className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-rose bg-white/90 px-5 py-2 font-hand text-[22px] font-bold leading-none text-rose shadow-[0_6px_0_rgba(122,31,69,.2)] transition active:translate-y-[3px] active:shadow-[0_3px_0_rgba(122,31,69,.2)] rotate-1.5 sm:px-6 sm:py-2.5 sm:text-[26px] sm:rotate-[1.5deg]"
   >
     <span></span> Add to calendar
   </button>
@@ -381,18 +381,18 @@ export default function Invitation() {
   <img
     src="/images/kiss.png"
     alt=""
-    className="pointer-events-none absolute top-10 left-4 h-14 w-14 rotate-[-12deg]"
+    className="pointer-events-none absolute top-8 left-4 h-10 w-10 -rotate-12 sm:top-10 sm:h-14 sm:w-14"
   />
   <img
     src="/images/kiss.png"
     alt=""
-    className="pointer-events-none absolute top-10 right-4 h-14 w-14 rotate-[12deg] -scale-x-100"
+    className="pointer-events-none absolute top-8 right-4 h-10 w-10 rotate-12 -scale-x-100 sm:top-10 sm:h-14 sm:w-14"
   />
 </Section>
 
           {/* 4) الصورة فقط */}
-<Section >
-  <div className="relative w-full max-w-[300px]">
+<Section sectionRef={section4Ref}>
+  <div className="relative w-full max-w-[280px] sm:max-w-[300px]">
     <div className="aspect-[870/1020] w-full overflow-hidden">
       <img
         className="h-full w-full object-cover object-bottom mix-blend-multiply"
