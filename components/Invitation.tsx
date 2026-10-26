@@ -251,7 +251,7 @@ export default function Invitation() {
 
     {/* Names and message */}
     <p
-      className="mt-6 max-w-[300px] text-center font-serif text-[18px] font-semibold leading-8 text-rose sm:mt-8 sm:max-w-[340px] sm:text-[22px] sm:leading-9
+      className="mt-6 max-w-[300px] text-center font-serif text-[20px] font-semibold leading-8 text-rose sm:mt-8 sm:max-w-[340px] sm:text-[22px] sm:leading-9
         [paint-order:stroke_fill] [-webkit-text-stroke:2px_#f6efe6] sm:[-webkit-text-stroke:4px_#f6efe6]
         [text-shadow:0_2px_8px_rgba(246,239,230,.95),0_0_16px_rgba(246,239,230,.9)] sm:[text-shadow:0_2px_12px_rgba(246,239,230,.95),0_0_24px_rgba(246,239,230,.9)]"
     >
@@ -262,7 +262,7 @@ export default function Invitation() {
     <img
       src="/images/cake.png"
       alt="Cake"
-      className="mt-6 h-24 w-24 sm:h-32 sm:w-32"
+      className="mt-4 h-24 w-24 sm:h-32 sm:w-32"
     />
 
     {/* Stickers */}
@@ -283,12 +283,12 @@ export default function Invitation() {
 <Section sectionRef={section2Ref}>
   <Reveal className="relative flex w-full flex-col items-center gap-4">
     {/* Eyebrow */}
-    <p className="font-hand text-[18px] font-bold leading-none text-rose/70 sm:text-[22px]">
+    <p className="font-hand text-[25px] font-bold leading-none text-rose/70 sm:text-[22px]">
        the big night is near
     </p>
 
     {/* Title */}
-    <p className="font-serif text-[28px] font-bold leading-none text-rose sm:text-[32px]">
+    <p className="font-serif text-[30px] font-bold leading-none text-rose sm:text-[32px]">
       Counting down
     </p>
 
@@ -303,7 +303,7 @@ export default function Invitation() {
     </div>
 
     {/* Tagline under countdown */}
-    <p className="mt-2 max-w-[280px] text-center font-hand text-[18px] font-bold leading-snug text-rose/80 sm:max-w-[300px] sm:text-[22px]">
+    <p className="mt-2 max-w-[280px] text-center font-hand text-[24px] font-bold leading-snug text-rose/80 sm:max-w-[300px] sm:text-[22px]">
       every second brings us closer to the best night
     </p>
 
@@ -331,7 +331,7 @@ export default function Invitation() {
   <Reveal className="relative z-10 mt-4 w-full rounded-[24px] border-2 border-white bg-gradient-to-b from-white/60 to-pink/20 px-4 py-5 text-center shadow-[0_12px_40px_rgba(122,31,69,.18)] sm:mt-5 sm:rounded-[28px] sm:px-5 sm:py-6">
     <dl className="grid gap-3 text-ink sm:gap-4">
       <div>
-        <dt className="font-hand text-xl font-bold text-pink sm:text-2xl">When</dt>
+        <dt className="font-hand text-2xl font-bold text-pink sm:text-2xl">When</dt>
         <dd className="font-serif text-lg font-bold text-rose sm:text-xl">
           {invite.weekday}, {invite.dateLabel}
         </dd>
@@ -341,7 +341,7 @@ export default function Invitation() {
       <div className="mx-auto h-px w-2/3 bg-pink/40" />
 
       <div>
-        <dt className="font-hand text-xl font-bold text-pink sm:text-2xl">Where</dt>
+        <dt className="font-hand text-2xl font-bold text-pink sm:text-2xl">Where</dt>
         <dd className="font-serif text-lg font-bold text-rose sm:text-xl">{invite.venue}</dd>
         <dd className="text-sm text-ink/80 sm:text-base">{invite.address}</dd>
       </div>
@@ -349,7 +349,7 @@ export default function Invitation() {
       <div className="mx-auto h-px w-2/3 bg-pink/40" />
 
       <div>
-        <dt className="font-hand text-xl font-bold text-pink sm:text-2xl">Good to know</dt>
+        <dt className="font-hand text-2xl font-bold text-pink sm:text-2xl">Good to know</dt>
         {invite.notes.map((n) => (
           <dd key={n} className="text-sm leading-snug text-ink/90 sm:text-base">
             {n}
