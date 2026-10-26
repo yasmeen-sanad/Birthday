@@ -9,7 +9,7 @@ export const invite = {
   year: "2026",
   weekday: "Friday",
   dateLabel: "30 October",
-  timeLabel: "7:00 PM – 12:00 AM",
+  timeLabel: "6:00 AM – 3:00 PM",
   venue: "Riyadh, Saudi Arabia", // ✏️ اسم المكان
   address: "", // ✏️ العنوان
   mapUrl: "", // ✏️ رابط الخريطة
@@ -17,6 +17,7 @@ export const invite = {
     "Get ready for FUN!",
     "Dress glam silver, pink and sparkle ",
   ],
-  whatsapp: "966500000000", // رقم واتساب بدون + للتأكيد
+ 
+  
 };
 export type Invite = typeof invite;

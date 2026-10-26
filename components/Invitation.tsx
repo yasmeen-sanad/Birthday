@@ -55,7 +55,7 @@ const btn =
   "rounded-full border-2 px-[18px] py-[13px] text-base font-medium focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-[3px] focus-visible:outline-hot";
 
 export default function Invitation() {
-  const wa = `https://wa.me/${invite.whatsapp}?text=${encodeURIComponent(`Hi! I'll be at ${invite.title} 🎉`)}`;
+
   const [a, b, c] = invite.names;
   const audioRef = useRef<HTMLAudioElement>(null);
   const section1Ref = useRef<HTMLDivElement>(null);
@@ -252,8 +252,8 @@ export default function Invitation() {
     {/* Names and message */}
     <p
       className="mt-6 max-w-[300px] text-center font-serif text-[18px] font-semibold leading-8 text-rose sm:mt-8 sm:max-w-[340px] sm:text-[22px] sm:leading-9
-        [paint-order:stroke_fill] [-webkit-text-stroke:4px_#f6efe6] sm:[-webkit-text-stroke:6px_#f6efe6]
-        [text-shadow:0_2px_12px_rgba(246,239,230,.95),0_0_24px_rgba(246,239,230,.9)]"
+        [paint-order:stroke_fill] [-webkit-text-stroke:2px_#f6efe6] sm:[-webkit-text-stroke:4px_#f6efe6]
+        [text-shadow:0_2px_8px_rgba(246,239,230,.95),0_0_16px_rgba(246,239,230,.9)] sm:[text-shadow:0_2px_12px_rgba(246,239,230,.95),0_0_24px_rgba(246,239,230,.9)]"
     >
       {a} {b} and {c} I hope you have the greatest year and the best birthday ever, Always Dream big and shine like a star!
     </p>
